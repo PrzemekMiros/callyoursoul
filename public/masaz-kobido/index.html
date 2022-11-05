@@ -46,7 +46,7 @@
       <meta property="og:type" content="image" />
       <meta property="og:image" content="/assets/img/opengraph.png" />
    </head>
-   <body class="">
+   <body>
 
       <div data-barba="wrapper">
 
@@ -252,7 +252,7 @@
                 Masaż Kobido
               </h1>
             </div>
-            <div class="section-masthead__wrapper-content mt-small pb-large">
+            <div class="section-masthead__wrapper-content mt-0 pb-large">
               <div class="section__content">
                 <div class="container">
                   <div class="row mt-medium">
@@ -408,6 +408,21 @@ modals.forEach(function (trigger) {
 });
 
       </script>
+
+      <script defer src="/assets/js/cookieconsent.js"></script>
+    <script defer src="/assets/js/cookieconsent-init.js"></script>
+
+    <script>
+        cookieconsent.run({
+        // ...
+        page_scripts: true
+        // ...
+        });
+    </script>
+
+    <script data-cookiecategory="analytics">
+
+    </script>
       
    </body>
 </html>

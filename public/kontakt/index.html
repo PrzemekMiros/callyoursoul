@@ -5,7 +5,7 @@
       <meta charset="utf-8"/>
       <meta http-equiv="x-ua-compatible" content="ie=edge"/>
       <title>Kontakt - Call your Soul</title>
-      <meta name="description" content="Skontaktuj się z nami">
+      <meta name="description" content="Tutaj znajdziesz dane kontaktowe. Masz pytania? Chętnie odpowiemy">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
       <meta content="telephone=no" name="format-detection"/>
       <meta name="HandheldFriendly" content="true"/>
@@ -46,7 +46,7 @@
       <meta property="og:type" content="image" />
       <meta property="og:image" content="/assets/img/opengraph.png" />
    </head>
-   <body class="">
+   <body>
 
       <div data-barba="wrapper">
 
@@ -246,67 +246,88 @@
 
 
     
-   <section class="section section-masthead text-center pt-xlarge pb-medium bg-light-1" data-arts-os-animation="true">
-            <div class="container-fluid">
-              <h1 class="xl section-masthead__heading d-inline-block my-0 arts-split-text js-arts-split-text js-transition-heading" data-arts-split-text="lines,words,chars" data-arts-split-text-set="chars" data-arts-split-text-set-direction="y" data-arts-split-text-set-distance="100%" data-arts-split-text-overflow-wrap="lines">
-                  Kontakt
-              </h1>
+<section class="section section-masthead text-center pt-xlarge pb-medium bg-light-1" data-arts-os-animation="true">
+  <div class="container-fluid">
+    <h1
+      class="xl section-masthead__heading d-inline-block my-0 arts-split-text js-arts-split-text js-transition-heading"
+      data-arts-split-text="lines,words,chars" data-arts-split-text-set="chars" data-arts-split-text-set-direction="y"
+      data-arts-split-text-set-distance="100%" data-arts-split-text-overflow-wrap="lines">
+      Kontakt
+    </h1>
+  </div>
+</section>
+
+<!-- section FORM -->
+<section class="section section-form section-content bg-light-1 pb-large">
+  <div class="container container_px-xs-0">
+    <div class="row">
+
+      <div class="col-lg-6" data-arts-os-animation="true" data-arts-os-animation-name="animateJump">
+        
+        <form class="form form-contact js-ajax-form bg-light-2 p-small" action="/forms/form-to-email.php" method="POST"
+          data-message-success="Thanks for your message! We will reply you as soon as possible."
+          data-message-error="Coś poszło nie tak">
+          <div class="row form__row">
+            <!-- input #1 -->
+            <div class="col-12 col-lg-6 form__col">
+              <label class="input-float js-input-float">
+                <input class="input-float__input" type="text" name="visitor_name" required="required"
+                  data-msg="Wpisz swoje imię" /><span class="input-float__label">Twoje imię</span><span
+                  class="form__error"></span>
+              </label>
             </div>
-          </section>
-
-          <!-- section FORM -->
-          <section class="section section-form section-content bg-light-1 pb-large">
-            <div class="container container_px-xs-0">
-              <div class="row">
-                <div class="col-lg-6">
-
-                </div>
-                <div class="col-lg-6" data-arts-os-animation="true" data-arts-os-animation-name="animateJump">
-                  <form class="form form-contact js-ajax-form bg-light-2 p-small" action="/forms/form-to-email.php" method="POST" data-message-success="Thanks for your message! We will reply you as soon as possible." data-message-error="Something went wrong :( Please contact me directly at &lt;a href='hello%40example.html'&gt;hello@example.com&lt;/a&gt;">
-                    <div class="row form__row">
-                      <!-- input #1 -->
-                      <div class="col-12 col-lg-6 form__col">
-                        <label class="input-float js-input-float">
-                          <input class="input-float__input" type="text" name="visitor_name" required="required" data-msg="Wpisz swoje imię"/><span class="input-float__label">Twoje imię</span><span class="form__error"></span>
-                        </label>
-                      </div>
-                      <!-- - input #1 -->
-                      <!-- input #2 -->
-                      <div class="col-12 col-lg-6 form__col">
-                        <label class="input-float js-input-float">
-                          <input class="input-float__input" type="email" name="visitor_email" required="required" data-msg="Wpisz adres e-mail"/><span class="input-float__label">Adres e-mail</span><span class="form__error"></span>
-                        </label>
-                      </div>
-                      <!-- - input #2 -->
-                    </div>
-                    <!-- input #3 -->
-                    <div class="row form__row">
-                      <div class="col form__col">
-                        <label class="input-float js-input-float">
-                          <textarea class="input-float__input input-float__input_textarea" name="visitor_msg"></textarea><span class="input-float__label">Wiadomość</span><span class="form__error"></span>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- - input #3 -->
-                    <!-- submit -->
-                    <div class="row form__row">
-                      <div class="col form__col form__col_submit">
-                        <button class="button">
-                          Wyślij
-                        </button>
-                      </div>
-                    </div>
-                    <!-- - submit -->
-                  </form>
-                </div>
-              </div>
+            <!-- - input #1 -->
+            <!-- input #2 -->
+            <div class="col-12 col-lg-6 form__col">
+              <label class="input-float js-input-float">
+                <input class="input-float__input" type="email" name="visitor_email" required="required"
+                  data-msg="Wpisz adres e-mail" /><span class="input-float__label">Adres e-mail</span><span
+                  class="form__error"></span>
+              </label>
             </div>
-          </section>
-          <!-- - section FORM -->
+            <!-- - input #2 -->
+          </div>
+          <!-- input #3 -->
+          <div class="row form__row">
+            <div class="col form__col">
+              <label class="input-float js-input-float">
+                <textarea class="input-float__input input-float__input_textarea" name="visitor_msg"></textarea><span
+                  class="input-float__label">Wiadomość</span><span class="form__error"></span>
+              </label>
+            </div>
+          </div>
+          <!-- - input #3 -->
+          <!-- submit -->
+          <div class="row form__row">
+            <div class="col form__col form__col_submit">
+              <button class="button">
+                Wyślij
+              </button>
+            </div>
+          </div>
+          <!-- - submit -->
+        </form>
+      </div>
 
-   </main>
+            <div class="col-lg-6">
+                 <div 
+    class="section-content__content content"
+    data-arts-os-animation="true"
+    data-arts-os-animation-name="animateJump"
+    >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2441.513222670153!2d20.95306751579812!3d52.270383979767686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb76b5e82e89%3A0xd0c31cd96813e459!2sZbigniewa%20Romaszewskiego%206%2C%2001-892%20Warszawa!5e0!3m2!1spl!2spl!4v1667681879774!5m2!1spl!2spl"
+          width="100%" height="499" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      </div>
 
+    </div>
+  </div>
+</section>
+<!-- - section FORM -->
 
+</main>
 
     <footer class="footer pt-large bg-light-1" id="page-footer" data-arts-theme-text="dark" data-arts-fixed-reveal="data-arts-fixed-reveal" data-arts-fixed-reveal-from="-15vh" data-arts-fixed-reveal-from-opacity="0.1">
                <div class="footer__inner">
@@ -432,6 +453,21 @@ modals.forEach(function (trigger) {
 });
 
       </script>
+
+      <script defer src="/assets/js/cookieconsent.js"></script>
+    <script defer src="/assets/js/cookieconsent-init.js"></script>
+
+    <script>
+        cookieconsent.run({
+        // ...
+        page_scripts: true
+        // ...
+        });
+    </script>
+
+    <script data-cookiecategory="analytics">
+
+    </script>
       
    </body>
 </html>

@@ -46,7 +46,7 @@
       <meta property="og:type" content="image" />
       <meta property="og:image" content="/assets/img/opengraph.png" />
    </head>
-   <body class="">
+   <body>
 
       <div data-barba="wrapper">
 
@@ -413,6 +413,21 @@ modals.forEach(function (trigger) {
 });
 
       </script>
+
+      <script defer src="/assets/js/cookieconsent.js"></script>
+    <script defer src="/assets/js/cookieconsent-init.js"></script>
+
+    <script>
+        cookieconsent.run({
+        // ...
+        page_scripts: true
+        // ...
+        });
+    </script>
+
+    <script data-cookiecategory="analytics">
+
+    </script>
       
    </body>
 </html>
