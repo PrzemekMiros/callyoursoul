@@ -1571,7 +1571,7 @@ img {
 
 a {
     text-decoration: none;
-    color: var(--color-gray-3);
+    color: var(--paragraph-color-dark);
     transition: all .2s ease-in-out
 }
 
@@ -1980,7 +1980,7 @@ a:hover {
 .button {
     position: relative;
     display: inline-block;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1;
     font-weight: 500;
     white-space: nowrap;
@@ -2070,7 +2070,7 @@ a:hover {
 
 .button__label {
     display: block;
-    padding: 18px 42px
+    padding: 0
 }
 
 .button__icon {
@@ -2101,21 +2101,12 @@ a:hover {
     .button {
         padding: 16px 32px
     }
-
-    .button__label {
-        padding: 16px 32px
-    }
 }
 
 @media screen and (max-width:991px) {
     .button {
         padding: 16px 30px
     }
-
-    .button__label {
-        padding: 16px 30px
-    }
-
     .button__icon i {
         font-size: 20px
     }
@@ -7425,11 +7416,15 @@ div.wpcf7-validation-errors {
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #fff;
+    background-color: var(--color-light-1);
     background-clip: padding-box;
     border-radius: 6px;
     outline: 0;
     padding: 3em
+}
+
+.modal-content header img {
+    display: none!important;
 }
 
 .modal-backdrop {
@@ -9051,7 +9046,7 @@ h6 {
     }
 }
 
-p {
+p, li {
     margin-top: 1em;
     margin-bottom: 1em;
     font-weight: 300;
@@ -9063,18 +9058,19 @@ p {
 }
 
 @media screen and (min-width:320px) {
-    p {
+    p, li {
         font-size: calc(var(--paragraph-min-font-size) * 1px + (var(--paragraph-max-font-size) - var(--paragraph-min-font-size)) * ((100vw - 320px)/ 1600))
     }
 }
 
 @media screen and (min-width:1920px) {
-    p {
+    p, li {
         font-size: calc(var(--paragraph-max-font-size) * 1px)
     }
 }
 
-.paragraph {
+.paragraph,
+li {
     font-weight: 400;
     font-size: calc(var(--paragraph-min-font-size) * 1px);
     line-height: var(--paragraph-line-height);
@@ -10605,7 +10601,7 @@ small {
     transition: all .2s ease-in-out;
     transform-origin: left center;
     cursor: text;
-    color: var(--color-gray-3)
+    color: var(--paragraph-color-dark)
 }
 
 .input-float__input {
@@ -11564,8 +11560,7 @@ bottom: calc(var(--fix-bar-vh, 30px) + var(--gutter-vertical, 100px));
     font-size: 16px;
     color: var(--paragraph-color-dark);
     font-family: var(--font-secondary);
-    font-weight: 300;
-    opacity: .7;
+    font-weight: 400
 }
 
 #page-header .menu .menu-item-has-children {
@@ -13019,4 +13014,26 @@ bottom: calc(var(--fix-bar-vh, 30px) + var(--gutter-vertical, 100px));
 
   .bookero-plugin-form-wrapper a {
     color: var(--color-accent-1)!important
+  }
+
+
+  .surname {
+    display: none!important
+  }
+
+  .checkbox-text {
+    font-size: 12px;
+    opacity: .7
+  }
+
+  .s-icon {
+    display: block;
+    width: 100%;
+    stroke: var(--color-accent-1);
+    fill: transparent;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    width: 98px;
   }
