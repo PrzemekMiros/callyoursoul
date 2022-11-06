@@ -1,9 +1,12 @@
+/* Cookies
+----------------------------------------- */
+
 /** Light color-scheme **/
 :root{
     --cc-bg: #fff;
     --cc-text: #2d4156;
     --cc-btn-primary-bg: #2d4156;
-    --cc-btn-primary-text: var(--color-light-1);
+    --cc-btn-primary-text: var(--cc-bg);
     --cc-btn-primary-hover-bg: #1d2e38;
     --cc-btn-secondary-bg: #eaeff2;
     --cc-btn-secondary-text: var(--cc-text);
@@ -36,8 +39,8 @@
     --cc-toggle-bg-off: #667481;
     --cc-toggle-bg-on: var(--cc-btn-primary-bg);
     --cc-toggle-bg-readonly: #454c54;
-    --cc-toggle-knob-bg: var(--cc-cookie-category-block-bg);
-    --cc-toggle-knob-icon-color: var(--color-light-1);
+    --cc-toggle-knob-bg: var(--color-light-2);
+    --cc-toggle-knob-icon-color: var(--cc-bg);
     --cc-block-text: #b3bfc5;
     --cc-cookie-category-block-bg: #23272a;
     --cc-cookie-category-block-bg-hover: #2b3035;
@@ -220,8 +223,8 @@
     width: 100%;
     bottom: 1.250em;
     right: 1.250em;
-    box-shadow: 0 0.625em 1.875em #000000;
-    box-shadow: 0 0.625em 1.875em rgba(2, 2, 3, 0.28);
+    box-shadow: 0 0.625em 2.5em #000000;
+    box-shadow: 0 0.625em 2.5em rgba(2, 2, 3, 0.1);
     opacity: 0;
     visibility: hidden;
     transform: scale(.95);
@@ -244,7 +247,9 @@
 
 #c-txt{
     font-size: 0.9em;
+    font-weight: 300;
     line-height: 1.5em;
+    color: var(--paragraph-color-dark);
 }
 
 .cc_div #c-bns{
@@ -268,7 +273,7 @@
     -o-user-select: none;
     user-select: none;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 96px;
     flex: 1;
 }
 
@@ -368,7 +373,7 @@ CookieConsent settings modal
 
 #s-bl .c-bl:hover{
     background: #f0f4f7;
-    background: var(--cc-cookie-category-block-bg);
+    background: var(--color-light-3);
 }
 
 #s-bl .c-bl:last-child{
@@ -392,7 +397,7 @@ CookieConsent settings modal
     padding: 0;
     border: none;
     background: #f0f4f7;
-    background: var(--cc-cookie-category-block-bg);
+    background: var(--color-light-2);
     transition: none;
 }
 
@@ -628,7 +633,7 @@ CookieConsent settings modal
     }
 
     #s-bl::-webkit-scrollbar-thumb{
-        border: 0.25em solid var(--color-light-1);
+        border: 0.25em solid var(--cc-bg);
         background: #cfd5db;
         background: var(--cc-webkit-scrollbar-bg);
         border-radius: 100em;
@@ -1288,7 +1293,7 @@ html.force--consent.show--consent body{
         white-space: nowrap;
         content: attr(data-column);
         color: #000;
-        color: var(--cc-text);
+        color: var(--paragraph-color-dark);
         overflow: hidden;
         text-overflow: ellipsis;
     }
