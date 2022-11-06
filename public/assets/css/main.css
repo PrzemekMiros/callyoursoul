@@ -296,7 +296,7 @@ a:hover {
     --color-dark-4: #555555;
     --color-light-1: #FBF7F2;
     --color-light-2: #f8f2eb;
-    --color-light-3: #fbfaf5;
+    --color-light-3: #f9f1e8;
     --color-light-4: #ebe3db;
     --color-gray-1: #b0b0b0;
     --color-gray-2: #cccccc;
@@ -574,6 +574,8 @@ a:hover {
     border-style: solid;
     padding: 15px 38px;
     border-radius: 96px;
+    border-color: var(--color-accent-2);
+    background: var(--color-light-1);
     color: var(--paragraph-color-dark);
     transition: all .2s ease-in-out;
     transition-property: all;
@@ -698,7 +700,6 @@ a:hover {
 
 .button.button_bordered {
     background-color: unset !important;
-    color: var(--color-accent-2);
     border-width: 1px;
     border-style: solid;
     border-color: var(--color-accent-2) ;
@@ -10167,13 +10168,9 @@ bottom: calc(var(--fix-bar-vh, 30px) + var(--gutter-vertical, 100px));
     display: inline-block
 }
 
-#page-header .menu>li:not(:last-child) {
-    margin-right: 1em
-}
-
 #page-header .menu>li a {
     display: block;
-    padding: .5em;
+    padding: .4em 1em;
     font-size: 16px;
     color: var(--paragraph-color-dark);
     font-family: var(--font-secondary);
@@ -11633,6 +11630,9 @@ bottom: calc(var(--fix-bar-vh, 30px) + var(--gutter-vertical, 100px));
     color: var(--color-accent-1)!important
   }
 
+  .contact-icon {
+    width: 60px;
+  }
 
   .surname {
     display: none!important
@@ -11667,5 +11667,47 @@ bottom: calc(var(--fix-bar-vh, 30px) + var(--gutter-vertical, 100px));
 
   ul.menu .menu-item {
     list-style: none;
-    margin: 0;
+    margin: 0 0 5px;
   }
+
+@media(min-width:1200px) {
+    #page-header .menu>li:not(:last-child) {
+        margin-right: 1em
+    }
+    
+    .footer-logo-wrap,
+    .social {
+        position: relative;
+      }
+    
+      .footer-logo-wrap::before,
+      .footer-logo-wrap::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        width: 7em;
+        height: 1px;
+        background: var(--color-accent-1);
+      }
+    
+      .footer-logo-wrap::before {
+        left: -10%;
+      }
+    
+      .footer-logo-wrap::after {
+        right: -10%;
+      }    
+      .social::before {
+        position: absolute;
+        content: "";
+        top: 100px;
+        left: calc(50% - 2px);
+        width: 1px;
+        height: 5em;
+        background: var(--color-accent-1);
+      }
+}
+
+
+
+
